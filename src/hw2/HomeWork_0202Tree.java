@@ -57,7 +57,8 @@ public class HomeWork_0202Tree {
 					x="F";
 					System.out.print(x);
 					break;
-				}	
+				}
+				
 			}
 			System.out.println();
 		}
