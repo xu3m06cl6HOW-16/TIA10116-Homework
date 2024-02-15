@@ -36,9 +36,14 @@ public class HomeWork0303 {
 	}
 	
 	
-	@Test
+	@Test//pro 選完產生六個不重複
 	public void method01() {
 		int a=0;
+		int [] sixnumber=new int[6];
+		for(int i=0;i<=6;i++) {
+			sixnumber[i]=(int)(Math.random()*50);
+			System.out.println(sixnumber[i]);
+		}
 		int[][] choies=new int[7][7];
 		Scanner sc=new Scanner(System.in);
 		System.out.println("請輸入你討厭的數字(1~9)");
