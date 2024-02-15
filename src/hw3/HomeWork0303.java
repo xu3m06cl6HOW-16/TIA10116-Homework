@@ -24,11 +24,13 @@ public class HomeWork0303 {
 					for(int j=0;j<choies[i].length;j++) {
 						choies[i][j]=++a;
 						if(a!=num) {
-							System.out.print(choies[i][j]+" ");
+							System.out.print(a+" ");
 							}
+						
 					}
-					System.out.println();
+					System.out.println("");
 				}
+				System.out.println("共有"+(a-num)+"個號碼可以選");
 			}
 		}else {
 			System.out.println("請重新輸入!");
@@ -39,11 +41,9 @@ public class HomeWork0303 {
 	@Test//pro 選完產生六個不重複
 	public void method01() {
 		int a=0;
-		int [] sixnumber=new int[6];
-		for(int i=0;i<=6;i++) {
-			sixnumber[i]=(int)(Math.random()*50);
-			System.out.println(sixnumber[i]);
-		}
+		int[] random=new int[6];
+		
+		
 		int[][] choies=new int[7][7];
 		Scanner sc=new Scanner(System.in);
 		System.out.println("請輸入你討厭的數字(1~9)");
@@ -58,14 +58,13 @@ public class HomeWork0303 {
 					for(int j=0;j<choies[i].length;j++) {
 						choies[i][j]=++a;
 						if(a!=num) {
-							System.out.print(choies[i][j]+" ");
-							}
+							System.out.print(a+" ");
+						}
 					}
-					System.out.println();
 				}
 			}
 		}else {
 			System.out.println("請重新輸入!");
-		}		
+		}
 	}
 }
