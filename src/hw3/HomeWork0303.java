@@ -69,4 +69,38 @@ public class HomeWork0303 {
 			System.out.println("請重新輸入!");
 		}
 	}
+	
+	@Test
+	public void test01() {
+		int a;
+		int b;
+		int c;
+		int d;
+		do {
+			 a=(int)(Math.random()*4);
+			 b=(int)(Math.random()*4);
+			 c=(int)(Math.random()*4);
+			 d=(int)(Math.random()*4);
+		}while(a!=b&&b!=c&&a!=c);
+		
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
+		System.out.println(d);
+	}
+	
+	@Test
+	public void test02() {
+		
+	int a,b,c;
+	do{
+		a=(int)(Math.random()*3);
+		b=(int)(Math.random()*3);
+		c=(int)(Math.random()*3);
+		}while(a==b||a==c||b==c);
+	
+	System.out.println(a);
+	System.out.println(b);
+	System.out.println(c);
+	}
 }
