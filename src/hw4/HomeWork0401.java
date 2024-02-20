@@ -63,6 +63,4 @@ public class HomeWork0401 {
 			}
 			System.out.println("這行字串共有"+sum+"個母音!");
 		}
-	
-
 }
