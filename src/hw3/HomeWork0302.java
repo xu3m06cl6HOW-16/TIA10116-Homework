@@ -31,11 +31,13 @@ public class HomeWork0302 {
 	public void method01() {
 		
 		int number=(int)(Math.random()*101);
-		Scanner sc=new Scanner(System.in);
 		
-			do {
-				System.out.println("請輸入一個0~100的整數");
-				if(sc.hasNextInt()) {
+		for(int i=0;i<2;i++) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("請輸入一個0~100的整數");
+			i+=3;
+			while(sc.hasNextInt()){
+
 					num=sc.nextInt();
 	
 					if(num>number) {
@@ -45,12 +47,11 @@ public class HomeWork0302 {
 					}
 					else{
 						System.out.println("答對了!答案就是"+number);
+						
 					}
-				}
-				else {
-					System.out.println("重新輸入!");
-					break;
-				}
-			} while (num!=number);
-	}	
+					
+			}
+			i=0;
+	}
+}
 }	
