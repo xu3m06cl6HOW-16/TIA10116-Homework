@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Caltest {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args)/* throws CalException,InputMismatchException*/{
 		
 		Scanner sc=new Scanner(System.in);
 		
