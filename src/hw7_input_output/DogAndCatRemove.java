@@ -20,11 +20,9 @@ public class DogAndCatRemove implements Serializable{
 		if(!output.exists()) {
 			output.mkdirs();
 		}
-		String filePath = "C:\\data\\Object.ser";
-		File newFile = new File(filePath);
-		if (newFile.createNewFile()) {
-            System.out.println("文件创建成功");
-        } 
+		
+		File File = new File("C:\\data\\Object.ser");
+		
 		
 		//輸出
 		Object[] obj=new Object[4];
@@ -33,7 +31,7 @@ public class DogAndCatRemove implements Serializable{
 		obj[2]=new Cat("Garfield");
 		obj[3]=new Cat("Maine Coon");
 		
-		FileOutputStream fw=new FileOutputStream(filePath);
+		FileOutputStream fw=new FileOutputStream(File);
 		ObjectOutputStream oos=new ObjectOutputStream(fw);
 		
 		
@@ -46,10 +44,10 @@ public class DogAndCatRemove implements Serializable{
 		
 		//輸入
 		
-		FileInputStream fr=new FileInputStream(filePath);
+		FileInputStream fr=new FileInputStream(File);
 		ObjectInputStream ois = new ObjectInputStream(fr);
 		
-		System.out.println(output.getName() + "檔案內容如下: ");
+		System.out.println(File.getName() + "檔案內容如下: ");
 		System.out.println("____________________________________________________");
 		
 		try {
@@ -57,6 +55,7 @@ public class DogAndCatRemove implements Serializable{
 				((Dog) ois.readObject()).speak();/*讀取檔案*/
 			  //readObject是Object類型 要轉Dog才能呼叫speak方法
 				System.out.println("--------------------");
+			
 			}
 		} catch (ClassCastException e) {
 			((Cat) ois.readObject()).speak();
