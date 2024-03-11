@@ -1,5 +1,6 @@
 package hw7_input_output;
 
+import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -48,21 +49,21 @@ public class DogAndCatRemove implements Serializable{
 		ObjectInputStream ois = new ObjectInputStream(fr);
 		
 		System.out.println(File.getName() + "檔案內容如下: ");
-		System.out.println("____________________________________________________");
 		
 		try {
 			while (true) {
-				((Dog) ois.readObject()).speak();/*讀取檔案*/
-			  //readObject是Object類型 要轉Dog才能呼叫speak方法
-				System.out.println("--------------------");
-			
+				Object obj1=ois.readObject();
+				if(obj1 instanceof Dog) {
+					((Dog)obj1).speak();	
+				}
+				if(obj1 instanceof Cat) {
+					((Cat) obj1).speak();
+					}
+				System.out.println("\n");
 			}
-		} catch (ClassCastException e) {
-			((Cat) ois.readObject()).speak();
-		}finally {
-			((Cat) ois.readObject()).speak();
+		} catch (EOFException e) {
+			System.out.println("已讀取完畢");
 		}
-		
 		
 		
 		
