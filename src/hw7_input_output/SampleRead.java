@@ -17,6 +17,7 @@ public class SampleRead {
 		
 		
 		while((str=br.readLine())!=null){ 
+			
 				sum += str.length();
 			k+=1;
 			System.out.println(str);
