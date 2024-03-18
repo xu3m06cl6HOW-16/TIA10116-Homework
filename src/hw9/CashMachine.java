@@ -78,6 +78,8 @@ public class CashMachine {
 		Deposit depot = new Deposit();
 		BusinessIn bi = new BusinessIn(depot);
 		BusinessOut bo = new BusinessOut(depot);
+		
+		bi.setPriority(Thread.MAX_PRIORITY);
 		bo.start();
 		bi.start();
 		
